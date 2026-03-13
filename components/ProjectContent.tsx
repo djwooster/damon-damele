@@ -231,8 +231,8 @@ function ActSection({ act }: { act: ProjectAct }) {
                     alt={iteration.imageLabel ?? iteration.title}
                     width={0}
                     height={0}
-                    sizes="60vw"
-                    className="w-[60%] h-auto"
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                    className="w-full md:w-[60%] h-auto"
                   />
                 ) : (
                   <div className="mx-8 mb-8 bg-black/[0.04] flex items-center justify-center h-48">
@@ -269,8 +269,8 @@ function ActSection({ act }: { act: ProjectAct }) {
               alt={`${act.name} interface`}
               width={0}
               height={0}
-              sizes="(max-width: 768px) 100vw, 60vw"
-              className="w-[75vw] h-auto mx-auto block"
+              sizes="100vw"
+              className="w-full h-auto block"
             />
           ))}
         </div>
