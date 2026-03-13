@@ -38,6 +38,7 @@ export default function CaseStudy() {
                 src={project.thumbnail}
                 alt={project.title}
                 fill
+                priority
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 80vw"
               />

@@ -195,7 +195,7 @@ function ActSection({ act }: { act: ProjectAct }) {
           </h3>
           <ul className="space-y-5 max-w-2xl">
             {act.researchInsights.map((insight, i) => (
-              <li key={i} className="flex gap-5">
+              <li key={insight} className="flex gap-5">
                 <span className="text-xs font-mono text-black/25 flex-shrink-0 pt-[3px]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -264,7 +264,7 @@ function ActSection({ act }: { act: ProjectAct }) {
         <div className="flex flex-col gap-8">
           {act.images.map((src, i) => (
             <Image
-              key={i}
+              key={`${src}-${i}`}
               src={src}
               alt={`${act.name} interface`}
               width={0}

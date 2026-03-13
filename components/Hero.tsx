@@ -42,9 +42,9 @@ export default function Hero() {
         animate="visible"
         className="text-[15vw] md:text-[10vw] lg:text-[7vw] font-black leading-[0.88] tracking-tight"
       >
-        {headline.map((word, i) => (
+        {headline.map((word) => (
           <span
-            key={i}
+            key={word}
             className="inline-block overflow-hidden pb-[0.15em] -mb-[0.15em] mr-[0.15em] last:mr-0"
           >
             <motion.span variants={wordVariants} className="inline-block">
