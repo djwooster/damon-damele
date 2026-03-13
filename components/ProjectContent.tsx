@@ -270,7 +270,7 @@ function ActSection({ act }: { act: ProjectAct }) {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto block"
+              className="w-full max-w-[80vw] h-auto block"
             />
           ))}
         </div>
