@@ -1,0 +1,71 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-black/10 px-6 md:px-12 pt-20 pb-10">
+      {/* CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.8, ease: EASE }}
+        className="mb-20"
+      >
+        <h2 className="text-5xl lg:text-6xl font-black tracking-tight leading-[0.88]">
+          Let&apos;s build
+          <br />
+          something that sticks.
+        </h2>
+        <a
+          href="mailto:hello@damondamele.com"
+          className="inline-flex items-center gap-3 mt-10 text-sm tracking-widest uppercase group"
+        >
+          <span className="border-b border-black pb-0.5 group-hover:pr-4 transition-all duration-300">
+            hello@damondamele.com
+          </span>
+          <span className="group-hover:translate-x-1 transition-transform duration-300">
+            →
+          </span>
+        </a>
+      </motion.div>
+
+      {/* Bottom bar */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-8 border-t border-black/10">
+        <p className="text-sm tracking-widest uppercase text-black/30">
+          © 2026 Damon Damele
+        </p>
+
+        <nav className="flex gap-8">
+          {[
+            { label: "Work", href: "/#work" },
+            { label: "Experience", href: "/#experience" },
+            { label: "Skills", href: "/#skills" },
+          ].map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-sm tracking-widest uppercase text-black/40 hover:text-black transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex gap-8">
+          <a
+            href="https://www.linkedin.com/in/damon-damele/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm tracking-widest uppercase text-black/40 hover:text-black transition-colors duration-200"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
